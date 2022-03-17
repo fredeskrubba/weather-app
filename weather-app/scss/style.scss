@@ -1,0 +1,87 @@
+@import "variables";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#weather-widget{
+    width: 70%;
+    margin: 1rem;
+    background: radial-gradient( rgba(28,36,52,1) 0%, rgba(39,102,124,1) 42%);
+    font-family: 'Teko', sans-serif;
+    border-radius: 10px;
+    #upper-section{
+        padding: 3rem;
+        background-color: black;
+        display: flex;
+        gap: 3rem;
+        justify-content: flex-start;
+        align-items: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        section{
+            background-color: rgba(39,102,124,1);
+            font-size: 2rem;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            align-items: center;
+            height: 5rem;
+        }
+    }
+    #middle-section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        #weather-box{
+            margin-left: 5rem;
+            width: 22%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            h1{
+                font-size: 4rem;
+                font-weight: 400;
+                border-bottom: 5px solid black;
+                line-height:60%;
+            }
+            h2{
+                font-size: 3rem;
+                font-weight: 400;
+            }
+            img{
+                height: 10rem;
+                margin: 1rem;
+            }
+        }
+        #clock{
+            background-color: #7775;
+            border-radius: 100%;
+            width: 10%;
+            height: 25%;
+            padding: 2.5rem;
+            backdrop-filter: blur(5px);
+            position: absolute;
+            right: 30rem;
+            bottom: 23rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            #time{
+                font-size: 3rem;
+                color: rgba(39,102,124,1);
+            }
+            #date{
+                font-size: 2rem;
+            }
+        }
+    }
+    #lower-section{
+
+    }
+}

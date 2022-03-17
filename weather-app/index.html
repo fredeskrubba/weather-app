@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-widget</title>
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+    <section id="weather-widget">
+        <div id="upper-section">
+            <section id="degrees">
+                <img src="assets/img/icons/temp-icon.svg" alt="termometer">
+                <p id="degree-number">12°</p>
+            </section>
+            <section id="wind">
+                <img src="assets/img/icons/wind-icon.svg" alt="wind-symbol">
+                <p id="wind-number">6m/s</p>
+            </section>
+            <section>
+                <img src="assets/img/icons/humidity-icon.svg" alt="humidity-icon">
+                <span id="humidity">50%</span> 
+            </section>
+        </div>
+        <article id="middle-section">
+            <div id="weather-box">
+                <div>
+                    <h1 id="city">Aalborg</h1>
+                    <h2 id="weather">sol</h2>
+                </div>
+                <div>
+                    <img src="assets/img/icons/sun-icon.svg" alt="sun-icon" id="weather-icon">
+                </div>
+            </div>
+            <div id="clock">
+                <p id="time">10:30</p>
+                <p id="date">25 - 01 - 2022</p>
+            </div>
+        </article>
+        <article id="lower-section">    
+        </article>
+    </section>
+</body>
+</html>
