@@ -44,7 +44,8 @@ async function fetchWeather(position){
   cityEl.textContent = data.name;
   degEL.textContent = kelvinToCelsius(data.main.temp) + "°C";
   weatherEL.textContent = data.weather[0].description;
-  changeIcon(weatherEL.textContent);
+  changeIcon(data.weather[0].main);
+  console.log(data  )
 }
 
 navigator.geolocation.getCurrentPosition(position =>{
@@ -57,22 +58,20 @@ function changeIcon(weather){
     case "mist":
       mainWeatherIcon.src = "assets/img/icons/mist-icon.svg";
       break;
-      case "clear sky":
-        mainWeatherIcon.src = "assets/img/icons/sun-icon.svg";
-        break;
-    case "few clouds":
-    case "scattered clouds":
-    case "broken clouds":
+    case "Clear":
+      mainWeatherIcon.src = "assets/img/icons/sun-icon.svg";
+      break;
+    case "Clouds":
       mainWeatherIcon.src = "assets/img/icons/clouds-icon.svg";
       break;    
-    case "shower rain":
-    case "rain":
+    case "Drizzle":
+    case "Rain":
       mainWeatherIcon.src = "assets/img/icons/rain-icon.svg";
       break;
-    case "thunderstorm":
+    case "Thunderstorm":
       mainWeatherIcon.src = "assets/img/icons/thunder-icon.svg";
       break;
-    case "snow":
+    case "Snow":
       mainWeatherIcon.src = "assets/img/icons/snow-icon.svg";
       break;
     
